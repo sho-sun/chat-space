@@ -8,20 +8,19 @@
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false, index: true|
-|password|string|null: false, index: true||
+|password|string|null: false, index: true|
 |nickname|string|null: false, index: true|
 
 ### Association
 - has_many :comments
-- has_many :groups
 - has_many  :groups,  through:  :groups_users
+- belongs_to :groups_users
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|reference|null: false, foreign_key: true|
-|group_id|reference|null: false, foreign_key: true|
+|name|string|null: false, index: true|
 
 ### Association
 - has_many :comments
@@ -32,8 +31,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|reference|null: false, foreign_key: true|
-|group_id|reference|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -44,7 +43,8 @@
 |------|----|-------|
 |text|text|
 |image|text|
-|user_id|reference|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group

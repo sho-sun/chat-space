@@ -1,0 +1,20 @@
+.side-bar
+ .header
+  .header__info
+   .user
+    %p.user__name masa
+   .icon
+    %ul.icon__user
+     %li.icon__user--edit
+      = link_to "#" do
+       = icon('far', 'edit')
+     %li.icon__user--cog
+      = link_to "#" do
+       = icon('fa', 'cog')
+
+ .side-bar__main
+  .group
+   .group__name
+    %p.name techcanp
+   .group__message
+    %p.message まだメッセージがありません

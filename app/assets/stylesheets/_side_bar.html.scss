@@ -4,51 +4,57 @@ $white:#ffffff;
   height: 100vh;
   width: 300px;
   float: left;
-
- .side-bar-header {
+ .header {
   height: 100px;
   background-color: #253141;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .side-bar-info {
+  &__info {
     height: 20px;
     width: 260px;
     display: flex;
     justify-content: space-between;
-    .user-info {
+    .user {
       height: 100%;
       display: flex;
       justify-content: left;
       align-items: center;
-      .user-name {
+      &__name {
         font-size: 16px;
         color: $white;
         font-weight: bold;
       }    
     }
-
-    .user-icon {
-      width: 60px;
-      display: flex;
-      text-align: right;
-      align-items: center;
-      justify-content: flex-end;
-        li {
+    .icon {
+      margin-right: 0px;
+      &__user {
+        width: 60px;
+        display: flex;
+        text-align: right;
+        align-items: center;
+        justify-content: flex-end;
+          &--edit {
+            a {
+              color: $white;
+              text-decoration: none;
+            }
+          }
+        &--cog {
+          margin-left: 5px;
           a {
             color: $white;
-            text-decoration: none;
+            // text-decoration: none;
           }
         }
-      .user-icon-cog {
-        margin-left: 5px;
       }
     }
+
   }
  }
-
- .side-bar-main {
+ 
+ &__main {
   height: calc(100% - 100px);
   background-color: #2f3e51;
   bottom: 0;

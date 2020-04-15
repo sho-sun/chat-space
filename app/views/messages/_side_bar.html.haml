@@ -1,17 +1,18 @@
 .side-bar
- .side-bar-header
-  .side-bar-info
-   .user-info
-    %p.user-name masa
-   %ul.user-icon
-    %li.user-icon-edit
-     = link_to "#" do
-      = icon('far', 'edit')
-    %li.user-icon-cog
-     = link_to "#" do
-      = icon('fa', 'cog')
+ .header
+  .header__info
+   .user
+    %p.user__name masa
+   .icon
+    %ul.icon__user
+     %li.icon__user--edit
+      = link_to "#" do
+       = icon('far', 'edit')
+     %li.icon__user--cog
+      = link_to "#" do
+       = icon('fa', 'cog')
 
- .side-bar-main
+ .side-bar__main
   .group
    .group__name
     %p.name techcanp

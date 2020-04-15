@@ -7,7 +7,7 @@
   width: calc(100vw - 300px);
   float: right;
 
-  .chat-main-header {
+  .header {
     height: 100px;
     width: 100%;
     background-color: $white;
@@ -16,13 +16,13 @@
     .groups {
       .group {
         padding: 35px 0px 15px 40px;
-        .group-name {
+        &__name {
           font-size: 20px;
           color: #333333;
         }
       }
       .member {
-        .group-member {
+        &__name {
           padding-left: 40px;
           font-size: 12px;
           color: $ash;

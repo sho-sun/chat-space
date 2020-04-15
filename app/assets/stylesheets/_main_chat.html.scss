@@ -1,0 +1,126 @@
+ $blue: #38aef0;
+ $ash:#999999;
+ $white:#ffffff;
+
+.chat-main{
+  height: 100vh;
+  width: calc(100vw - 300px);
+  float: right;
+
+  .chat-main-header {
+    height: 100px;
+    width: 100%;
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    .groups {
+      .group {
+        padding: 35px 0px 15px 40px;
+        .group-name {
+          font-size: 20px;
+          color: #333333;
+        }
+      }
+      .member {
+        .group-member {
+          padding-left: 40px;
+          font-size: 12px;
+          color: $ash;
+        }        
+      }
+    }
+  a {
+    text-decoration: none;
+  }
+    .button {
+      height: 40px;
+      width: 72px;
+      font-size: 16px;
+      color: $blue;
+      border: 1px solid;
+      padding: 0px 20px;
+      margin-top: 28px;
+      margin-right: 40px;
+      line-height: 40px;
+    }
+  }
+
+  .chat-main-content {
+    height: calc(100vh - 190px);
+    width: 100%;
+    background-color: #fafafa;
+    .contents {
+      padding-left: 40px;
+      padding-top: 35px;
+      .content {
+        display: flex;
+        .name {
+          color: #333333;
+          font-size: 16px;
+        }
+        .day {
+          color: $ash;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+      .messages {
+        margin-top: 12px;
+        .message {
+          color: #434A54;
+          font-size: 14px;
+          margin-bottom: 46px;
+        }
+      }
+    }
+
+  }
+  
+  .chat-main-footer {
+    bottom: 0;
+    height: 90px;
+    width: 100%;
+    background-color: #d2d2d2;
+    position: relative;
+    .message-form {
+      height: 50px;
+      width: 100%;
+      padding-left: 40px;
+      padding-right: 40px;
+      position: absolute;
+      top: 50%;
+      -webkit-transform : translateY(-50%);
+      transform : translateY(-50%);;
+      display: flex;
+      justify-content: space-between;
+      .new-message {
+        height: 50px;
+        width: 100% ;
+        position: relative;
+        display: flex;
+        .message {
+          width: 100%;
+          padding-left: 10px;
+        }
+        .icon-image {
+          top: 15px;
+          position: absolute;
+          right: 10px;
+          cursor: pointer;
+          .image-file {
+            display: none;
+          }
+        }
+      }
+     .button {
+       height: 50px;
+       width: 100px;
+       font-size: 16px;
+       background-color: $blue;
+       margin-left: 15px;
+       color: $white;
+       cursor: pointer;
+     }
+    }
+  }
+}

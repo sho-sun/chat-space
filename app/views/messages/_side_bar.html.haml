@@ -7,15 +7,18 @@
    .icon
     %ul.icon__user
      %li.icon__user--edit
-      = link_to "#" do
+      = link_to new_group_path do
        = icon('far', 'edit')
      %li.icon__user--cog
       = link_to edit_user_path(current_user) do
        = icon('fa', 'cog')
 
  .side-bar__main
-  .group
-   .group__name
-    %p.name techcanp
-   .group__message
-    %p.message まだメッセージがありません
+  - current_user.groups.each do |group|
+   .group
+    = link_to '#' do
+     .group__name
+      %p.name
+       = group.name
+     .group__message
+      %p.message まだメッセージがありません

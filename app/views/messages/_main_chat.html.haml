@@ -2,10 +2,16 @@
  .header
   .groups
    .group
-    %p.group__name test
+    %p.group__name
+     = @group.name
    .member
-    %p.member__name Member : masa
-  %a(href="#")
+    %p.member__name
+     Member：
+     - @group.users.each do |user|
+      = user.name
+
+    
+  %a(href="edit")
    .button Edit
 
  .chat-main-content
@@ -14,19 +20,15 @@
     %p.name masa
     %p.day 2019/11/20(Wed) 17:43:01
    .messages
-    %p.message おはよう！
-   .content
-    %p.name masa
-    %p.day 2019/11/20(Wed) 17:43:34
-   .messages
-    %p.message 今日は夜から雨
-
+    = render @messages
+    
  .chat-main-footer
   .message-form
-   %form.new-message
-    .input-box
-    %input{type: "text", class: "message", placeholder: "type a message"}
-    %label.icon-image
-     = icon('fas', 'image')
-     %input{type: "file", class: "image-file"}
-   %input{type: "submit", class: "button", value: "Send"}
+   .new-message
+    = form_for [@group, @message] do |f|
+     = f.text_field :content, class: 'message', placeholder: 'type a message'
+     .input-box
+      = f.label :image, class: 'icon-image' do
+       = icon('fas', 'image')
+       = f.file_field :image, class: 'image-file'
+     = f.submit 'Send', class: 'button'

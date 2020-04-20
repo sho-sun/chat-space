@@ -3,13 +3,14 @@ $white:#ffffff;
 .side-bar {
   height: 100vh;
   width: 300px;
-  float: left;
  .header {
   height: 100px;
+  width: 300px;
   background-color: #253141;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
 
   &__info {
     height: 20px;
@@ -45,7 +46,6 @@ $white:#ffffff;
           margin-left: 5px;
           a {
             color: $white;
-            // text-decoration: none;
           }
         }
       }
@@ -58,6 +58,7 @@ $white:#ffffff;
   height: calc(100% - 100px);
   background-color: #2f3e51;
   bottom: 0;
+  padding-top: 100px;
   .group {
     height: 65px;
     &__name {

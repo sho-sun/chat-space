@@ -5,9 +5,10 @@
 .chat-main{
   height: 100vh;
   width: calc(100vw - 300px);
-  float: right;
+  // float: right;
 
   .header {
+    position: fixed;
     height: 100px;
     width: 100%;
     background-color: $white;
@@ -49,9 +50,11 @@
     height: calc(100vh - 190px);
     width: 100%;
     background-color: #fafafa;
+    padding-top: 100px;
     .contents {
       padding-left: 40px;
       padding-top: 35px;
+      height: 100%;
       .content {
         display: flex;
         .name {
@@ -66,6 +69,8 @@
       }
       .messages {
         margin-top: 12px;
+        height: 100%;
+        overflow: scroll;
         .message {
           color: #434A54;
           font-size: 14px;
@@ -112,15 +117,18 @@
           }
         }
       }
-     .button {
-       height: 50px;
-       width: 100px;
-       font-size: 16px;
-       background-color: $blue;
-       margin-left: 15px;
-       color: $white;
-       cursor: pointer;
-     }
+      .input-box {
+       .button {
+          height: 50px;
+          width: 100px;
+          font-size: 16px;
+          background-color: $blue;
+          margin-left: 15px;
+          color: $white;
+          cursor: pointer;
+          float: right;
+       }
+      }
     }
   }
 }

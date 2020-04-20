@@ -17,8 +17,8 @@
  .chat-main-content
   .contents
    .content
-    %p.name masa
-    %p.day 2019/11/20(Wed) 17:43:01
+    -# %p.name masa
+    -# %p.day 2019/11/20(Wed) 17:43:01
    .messages
     = render @messages
     
@@ -31,4 +31,4 @@
       = f.label :image, class: 'icon-image' do
        = icon('fas', 'image')
        = f.file_field :image, class: 'image-file'
-     = f.submit 'Send', class: 'button'
+       = f.submit 'Send', class: 'button'

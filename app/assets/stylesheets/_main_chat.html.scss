@@ -4,10 +4,11 @@
 
 .chat-main{
   height: 100vh;
-  width: calc(100vw - 300px);
+  // width: calc(100vw - 300px);
+  width: 100%;
   .header {
     height: 100px;
-    width: 100%;
+    width: calc(100vw - 300px);
     background-color: $white;
     display: flex;
     justify-content: space-between;
@@ -32,7 +33,7 @@
   }
     .button {
       height: 40px;
-      width: 72px;
+      width: 50px;
       font-size: 16px;
       color: $blue;
       border: 1px solid;
@@ -40,12 +41,13 @@
       margin-top: 28px;
       margin-right: 40px;
       line-height: 40px;
+      text-align: center;
     }
   }
 
   .chat-main-content {
     height: calc(100vh - 190px);
-    width: 100%;
+    width: calc(100vw - 300px);
     background-color: #fafafa;
     .contents {
       padding-left: 40px;
@@ -80,12 +82,12 @@
   .chat-main-footer {
     bottom: 0;
     height: 90px;
-    width: 100%;
+    width: calc(100vw - 300px);
     background-color: #d2d2d2;
     position: relative;
     .message-form {
       height: 50px;
-      width: 100%;
+      width: calc(100vw - 400px);
       padding-left: 40px;
       padding-right: 40px;
       position: absolute;
@@ -96,11 +98,10 @@
       .new-message {
         height: 50px;
         width: 100% ;
-        position: relative;
         display: flex;
-        .message {
+        .messagespace {
           margin-top: 10px;
-          width: 930px;
+          width: calc(100vw - 500px);
           padding-left: 10px;
         }
         .icon-image {

@@ -4,7 +4,6 @@
 
 .chat-main{
   height: 100vh;
-  // width: calc(100vw - 300px);
   width: 100%;
   .header {
     height: 100px;
@@ -32,12 +31,12 @@
     text-decoration: none;
   }
     .button {
-      height: 40px;
+      height: 38px;
       width: 50px;
       font-size: 16px;
       color: $blue;
       border: 1px solid;
-      padding: 0px 20px;
+      padding: 0px 10px;
       margin-top: 28px;
       margin-right: 40px;
       line-height: 40px;
@@ -53,30 +52,30 @@
       padding-left: 40px;
       padding-top: 35px;
       height: 100%;
-      .content {
+      overflow: scroll;
+
+      .upper-message {
         display: flex;
-        .name {
+        .upper-message__user-name {
           color: #333333;
           font-size: 16px;
         }
-        .day {
+        .upper-message__date {
           color: $ash;
           font-size: 12px;
           margin-left: 10px;
         }
       }
-      .messages {
+      .lower-message {
         margin-top: 12px;
         height: 100%;
-        overflow: scroll;
-        .message {
+        .lower-message__content {
           color: #434A54;
           font-size: 14px;
           margin-bottom: 46px;
         }
       }
     }
-
   }
   
   .chat-main-footer {
